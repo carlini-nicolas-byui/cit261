@@ -9,12 +9,14 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
  </head>
- <body>
+ <body  onload="set_name()">
         <header>
             <img src="images/nicolas.jpg" alt="Nicolas Carlini">
             <h1>Fluency Evidence: JavaScript</h1>
+
         </header>
         <main>
+            <p id="names"> </p> 
             <h2>Basic Fluency</h2>
             <a>Javascript is a programming language that enables interaction in a web site. One of the main advantages I've found is that it allows you to make changes to elements in the website without having to reload the site.</a>
             <a>Example #1:</a>
@@ -24,39 +26,65 @@
             <br>
             <a>Example #2:</a>
             <br>
-            <img src="images/nicolas.jpg" alt="Nicolas Carlini" id="mypicture" width="150px";>
+            <img src="images/nicolas.jpg" alt="Nicolas Carlini" id="nowyouseeme" width="150px";>
             <br>
-            <button type="button" onclick="document.getElementById('mypicture').style.display='none'">Hide the Picture!</button>
+            <button type="button" onclick="hide_image()">Hide/unhide the Picture!</button>
             <br>
             <br>
+            <a>Example #3:</a>
+            <br>
+            <a>You can create an array (list) of elements and use a loop to print them: </a>
+            <script type="text/javascript">
+                var words = new Array("Kobe", "Bryant", "was", "an", "awesome", "player");
+                for (i=0;i<words.length;i++)
+                {
+                    document.write("<li> " + words[i] + "</li><br />");
+                }
+            </script>
+
             <h2>Advanced Skills: JavaScript Calculator</h2>
             <br>
+
+
 
             <div class=”calculator”>
                 <table>
                     <tr>
                     <td><input type="button" value="c" onclick="clear_display()"/> </td>
+                    <td><input type="button" value="History" onclick="show_history()"/> </td>
                     <td colspan="3"><input type="text" id="equation"/></td>
                 <!-- clr() function will call clr to clear all value -->
                     </tr>
                     <tr>
-                <!-- buttons-->
-                        <td><input type="button" value="+" onclick="display_text('+')"/> </td>
-                        <td><input type="button" value="1" onclick="display_text('1')"/> </td>
-                        <td><input type="button" value="2" onclick="display_text('2')"/> </td>
-                        <td><input type="button" value="3" onclick="display_text('3')"/> </td>
+                <!-- create buttons using a loop (demostration only!)-->
+                    <td><input type="button" value="+" onclick="display_text('+')"/> </td>
+                    <script type="text/javascript">
+                        for (i=1;i<4;i++)
+                        {   
+                            console.log(i);  //for logging purposes only...
+                            document.write('<td><input type="button" value="'+ i +'" onclick="display_text('+ i +')"/> </td>');
+                        }
+                    </script>
                     </tr>
                     <tr>
                         <td><input type="button" value="-" onclick="display_text('-')"/> </td>
-                        <td><input type="button" value="4" onclick="display_text('4')"/> </td>
-                        <td><input type="button" value="5" onclick="display_text('5')"/> </td>
-                        <td><input type="button" value="6" onclick="display_text('6')"/> </td>
+                        <script type="text/javascript">
+                            for (i=4;i<7;i++)
+                            {   
+                                console.log(i); //for logging purposes only...
+                                document.write('<td><input type="button" value="'+ i +'" onclick="display_text('+ i +')"/> </td>');
+                            }
+                        </script>
                     </tr>
                     <tr>
                         <td><input type="button" value="*" onclick="display_text('*')"/> </td>
-                        <td><input type="button" value="7" onclick="display_text('7')"/> </td>
-                        <td><input type="button" value="8" onclick="display_text('8')"/> </td>
-                        <td><input type="button" value="9" onclick="display_text('9')"/> </td>
+                        <script type="text/javascript">
+                            for (i=7;i<10;i++)
+                            {   
+                                console.log(i);  //for logging purposes only...
+                                document.write('<td><input type="button" value="'+ i +'" onclick="display_text('+ i +')"/> </td>');
+                            }
+                        </script>
                     </tr>
                     <tr>
                         <td><input type="button" value="/" onclick="display_text('/')"/> </td>
