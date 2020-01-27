@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-us">
+ <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>CIT 261 - Fluency Evidence | Nicolas Carlini | BYU-Idaho</title>
+        <meta name="description" content="Fluency evidence page for Nicolas Carlini in CIT 261 at Brigham Young University-Idaho. ">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+ </head>
+ <body>
+        <header>
+            <img src="images/nicolas.jpg" alt="Nicolas Carlini">
+            <h1>Fluency Evidence: JavaScript</h1>
+        </header>
+        <main>
+            <h2>Basic Fluency</h2>
+            <a>Javascript is a programming language that enables interaction in a web site. One of the main advantages I've found is that it allows you to make changes to elements in the website without having to reload the site.</a>
+            <a>Example #1:</a>
+            <p id="example1">If you click on the button, this text will change.</p>
+            <br>
+            <button type="button" onclick='document.getElementById("example1").innerHTML = "I am a new text!"'>Try me!</button>
+            <br>
+            <a>Example #2:</a>
+            <br>
+            <img src="images/nicolas.jpg" alt="Nicolas Carlini" id="mypicture" width="150px";>
+            <br>
+            <button type="button" onclick="document.getElementById('mypicture').style.display='none'">Hide the Picture!</button>
+            <br>
+            <br>
+            <h2>Advanced Skills: JavaScript Calculator</h2>
+            <br>
+
+            <div class=”calculator”>
+                <table>
+                    <tr>
+                    <td><input type="button" value="c" onclick="clear_display()"/> </td>
+                    <td colspan="3"><input type="text" id="equation"/></td>
+                <!-- clr() function will call clr to clear all value -->
+                    </tr>
+                    <tr>
+                <!-- buttons-->
+                        <td><input type="button" value="+" onclick="display_text('+')"/> </td>
+                        <td><input type="button" value="1" onclick="display_text('1')"/> </td>
+                        <td><input type="button" value="2" onclick="display_text('2')"/> </td>
+                        <td><input type="button" value="3" onclick="display_text('3')"/> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="-" onclick="display_text('-')"/> </td>
+                        <td><input type="button" value="4" onclick="display_text('4')"/> </td>
+                        <td><input type="button" value="5" onclick="display_text('5')"/> </td>
+                        <td><input type="button" value="6" onclick="display_text('6')"/> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="*" onclick="display_text('*')"/> </td>
+                        <td><input type="button" value="7" onclick="display_text('7')"/> </td>
+                        <td><input type="button" value="8" onclick="display_text('8')"/> </td>
+                        <td><input type="button" value="9" onclick="display_text('9')"/> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="/" onclick="display_text('/')"/> </td>
+                        <td><input type="button" value="." onclick="display_text('.')"/> </td>
+                        <td><input type="button" value="0" onclick="display_text('0')"/> </td>
+                        <!-- This will do the magic: -->
+                        <td><input type="button" value="=" onclick="answer()"/> </td>
+                    </tr>
+                </table>
+            </div>
+    </main>
+    <script src="js/calculator.js"></script>
+        <footer>
+            <p>&copy; 2020 - Nicolas Carlini - Argentina - <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+      </body>
+</html>
