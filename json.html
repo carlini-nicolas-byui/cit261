@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-us">
+ <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>CIT 261 - Fluency Evidence | Nicolas Carlini | BYU-Idaho</title>
+        <meta name="description" content="Fluency evidence page for Nicolas Carlini in CIT 261 at Brigham Young University-Idaho. ">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+ </head>
+ <body>
+        <header>
+            <img src="images/nicolas.jpg" alt="Nicolas Carlini">
+            <h1>Fluency Evidence: JSON and AJAX</h1>
+
+        </header>
+        <main>
+            <h1>Lets Obtain Weather via API</h1>
+            <div class="city_section">
+                <section class="city_combo">
+                  <h3>Select City</h3>
+                  <select id="city">
+                    <option value="84010">Bountiful, UT</option>
+                    <option value="91945">San Diego, CA</option>
+                    <option value="10001">New York, NY</option>
+                    <option value="33101">Miami, FL</option>
+                  </select>
+                </section>
+
+                <input type="button" value="Click to see 5 day weather" id="weatherbutton" onclick="get_weather()"/>
+            </div>
+            
+              <section class="forecast">
+                <h3>Temperature Forecast</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Day</th>
+                      <th><span id="dateone"></span></th>
+                      <th><span id="datetwo"></span></th>
+                      <th><span id="datethree"></span></th>
+                      <th><span id="datefour"></span></th>
+                      <th><span id="datefive"></span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Forecast</th>
+                      <td><span id="dayone"></span>&deg;F</td>
+                      <td><span id="daytwo"></span>&deg;F</td>
+                      <td><span id="daythree"></span>&deg;F</td>
+                      <td><span id="dayfour"></span>&deg;F</td>
+                      <td><span id="dayfive"></span>&deg;F</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+  
+        </main>
+      </main>
+      <script src="js/weather.js"></script>
+          <footer>
+              <p>&copy; 2020 - Nicolas Carlini - Argentina - <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+          </footer>
+        </body>
+  </html>

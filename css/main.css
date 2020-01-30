@@ -62,3 +62,21 @@ input[type="text"]{
     width:100%;
     font-size: 40px;
 }
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+  } 
+  
+th,td {
+    border: 1px solid black;
+  }
+
+#weatherbutton{
+    border-radius: 2px;
+    background-color:lightblue;
+    color: black;
+    border-color:black ;
+    width:50%;
+    font-size: 14px;
+}
