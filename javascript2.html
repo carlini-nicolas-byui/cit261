@@ -12,17 +12,40 @@
  <body>
         <header>
             <img src="images/nicolas.jpg" alt="Nicolas Carlini">
-            <h1>Fluency Evidence: JavaScript Objects</h1>
+            <h1>Fluency Evidence: JavaScript Objects / DOM</h1>
 
         </header>
         <main>
-            <h1>Temple Trip Sign Ip</h1>
+            <h2>Basic Example of DOM</h2>
+            <ul id="myList">
+                <li>I am first</li>
+                <li>I am second</li>
+              </ul>
+              <button onclick="addThird()">Add Element</button>
+              <button onclick="removeThird()">Remove Element</button>
+           <br/><br/>
+           
+            <h1>Temple Trip Sign Up</h1>
             Full Name: <input type ="text" id = "name"><br/><br/>
-            Ward:  <input type ="text" id = "ward"><br/><br/>
-            Month: <input type ="text" id = "month"><br/><br/>
-            <input type = "button" id="button" onclick="new_trip()" value = "Submit"><br/>
+            Ward:  <select id="ward">
+                <option value="Alberdi-768490">Alberdi Ward</option>
+                <option value="Fisherton-892323">Fisherton Ward</option>
+                <option value="Echesortu-346723">Echesortu Ward</option>
+                <option value="Funes-873493">Funes Ward</option>
+              </select>
+           <br/><br/>
+            Month: <select id="month">
+                <option value="march">March</option>
+                <option value="june">June</option>
+                <option value="august">August</option>
+                <option value="november">November</option>
+              </select>
+           <br/><br/>
+           Ordinance Priority (top of list): <input type ="checkbox" id = "priority"><br/><br/>
+            <input type = "button" id="button" onclick="new_trip()" value = "Add"><br/>
             <h2>List of passengers:</h2>
             <p id="output"></p>
+            <div id="total_list"></div>
 
     </main>
     <script src="js/objects.js"></script>
