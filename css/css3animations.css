@@ -1,0 +1,114 @@
+.container {
+    height: 100px;
+    background-color: orange;
+    width: 100px;
+    padding: 2px;
+}
+
+.orbiting-circle {
+    height: 25%;
+    width: 25%;
+    background-color: purple;
+    border-radius: 50%;
+    animation: orbit 3s linear infinite;
+}
+	
+
+
+
+@keyframes orbit{
+    0% { transform: translate(0,0); }
+    5% { transform: translate(0,0); } /* don't change for 5% of the time...pause */
+    25% { transform: translate(300%,0%); } /* start moving again */
+    30% { transform: translate(300%,0%); } /* pause */
+    50% { transform: translate(300%,300%); } /* move */
+    55% { transform: translate(300%,300%); }
+    75% { transform: translate(0%,300%); }
+    80% { transform: translate(0%,300%); }
+    100% { transform: translate(0%,0%); }
+}
+
+.container-two {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.morphing-circle {
+    height: 25%;
+    width: 25%;
+    background-color:black;	
+    border-radius: 50%;
+    transition: border-radius .5s ease, 
+                background-color .5s ease, 
+                transform .5s ease .5s;
+  animation: morphing-circle-square 3s linear infinite;
+}
+.morphing-circle {
+    border-radius: 0;
+    background-color:  gray;
+    transform: rotate(90deg);
+}
+
+@keyframes morphing-circle-square {
+    0% {border-radius: 50%}
+    15% { 
+        border-radius: 50%;
+        background-color: red;
+    }
+    50% { 
+        border-radius: 0%;
+        background-color: yellow;
+        transform: rotate(0deg);
+    }
+    75% { 
+        border-radius: 0%;
+        background-color: white;
+        transform: rotate(90deg);   
+    }
+    100% { /* stay rotated at 90, but change back to a circle */
+        border-radius: 50%;
+        background-color: blue;
+        transform: rotate(90deg);
+    }
+}
+
+
+.container-three {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.scaling-circle {
+    height: 35%;
+    width: 35%;
+   border-radius: 50%;
+    background-color:darkblue;	
+    transition: border-radius .5s ease, 
+                background-color .5s ease, 
+                transform .5s ease .5s;
+  animation: scale-circle  3s linear infinite;
+}
+@keyframes scale-circle {
+    0% {
+      transform: scale(1);
+  }
+    25% {
+transform: scale(1.5);
+    }
+    50% { 
+transform: scale(1);
+    }
+    75% { 
+      transform: scale(1.5);
+    }
+   80% {
+      transform: scale(1);
+    }
+    90% { 
+      transform: scale(1.5);
+    }
+  100% { 
+      transform: scale(1);
+    }
+}
