@@ -1,0 +1,38 @@
+
+  .headline{
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  #wrapper {
+    width: 600px;
+    background: #FFF;
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 3px;
+  }
+  
+  button {
+    border: none;
+    background: blue;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  button:hover, button:focus {
+    cursor: pointer;
+    outline: none;
+  }
+  
+  #editor {
+    padding: 1em;
+    background: gray;
+    border-radius: 3px;
+  }
+  
+  #editor:focus {
+    background: #FFF;
+    border-color: #69c773;
+  }
+  
