@@ -99,3 +99,30 @@
     background-color: white;
   
   }
+
+
+  .container {
+    height: 100px;
+    width: 100px;
+    padding: 2px;
+}
+
+
+  
+a:hover{
+  animation: morphing-menu 1s linear infinite;
+}
+
+@keyframes morphing-menu{
+  0% {border-radius: 0%}
+  25% { 
+      border-radius: 50%;
+      background-color: gray;
+  }
+  75% { 
+      border-radius: 0%;
+      background-color: black;
+
+  }
+
+}
