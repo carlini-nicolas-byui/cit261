@@ -4,7 +4,7 @@ var cxt = c.getContext("2d");
 c.width = window.innerWidth;
 c.height = window.innerHeight;
 
-var chinese = "NICOLASCARLINICIT230";
+var chinese = "NICOLASCARLINICIT261";
 chinese = chinese.split("");
 
 var font_size =30;
