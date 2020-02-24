@@ -1,0 +1,21 @@
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+.profile {
+  padding: var(--spacing);
+  background: var(--base);
+  -webkit-filter: blur(var(--blur));
+  filter: blur(var(--blur));
+  width: 200px;
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+input {
+  width:100px;
+}
