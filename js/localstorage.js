@@ -1,6 +1,7 @@
 var editBtn = document.getElementById('editBtn');
 var editables = document.querySelectorAll('#title, #author, #content');
 
+
 if (typeof(Storage) !== "undefined") {
   if (localStorage.getItem('title') !== null) {
     editables[0].innerHTML = localStorage.getItem('title');
@@ -34,3 +35,10 @@ editBtn.addEventListener('click', function(e) {
     }
   }
 });
+
+  function touchFunction() {
+    document.getElementById("output").innerHTML = "you are using a mobile device!";
+  }
+
+  document.getElementById("touch_me").addEventListener("touchstart", touchFunction);
+
