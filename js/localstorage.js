@@ -42,3 +42,63 @@ editBtn.addEventListener('click', function(e) {
 
   document.getElementById("touch_me").addEventListener("touchstart", touchFunction);
 
+
+  window.addEventListener("load", function(event) {
+    var key = document.getElementById("key_name");
+    var value = document.getElementById("key_value");
+    var add = document.getElementById("add");
+       var remove = document.getElementById("remove");
+       var clear = document.getElementById("clear");
+       var content = document.getElementById("values");
+ 
+    add.addEventListener("click", function(event) {
+         if (key.value !== "") {
+      try {
+            localStorage.setItem(key.value, value.value);
+      } catch (e) {
+       alert("Exceeded Storage Quota!");
+      }
+           refreshContents();
+         }
+       });
+ 
+       remove.addEventListener("click", function(event) {
+         if (key.value !== "") {
+           localStorage.removeItem(key.value);
+           refreshContents();
+         }
+       });
+ 
+       clear.addEventListener("click", function(event) {
+         localStorage.clear();
+         refreshContents();
+       });
+ 
+       window.addEventListener("storage", function(event) {
+         var k = event.key;
+         var newValue = event.newValue;
+         var oldValue = event.oldValue;
+         var url = event.url;
+         var storageArea = event.storageArea;
+ 
+         alert("EVENT:n" + k + "n" + newValue + "n" + oldValue + "n" + url + "n" + storageArea);
+         refreshContents();
+       });
+ 
+       function refreshContents() {
+         var str = "";
+ 
+         for (var i = 0, len = localStorage.length; i < len; i++) {
+           var k = localStorage.key(i);
+           var v = localStorage.getItem(k);
+ 
+           str += "'" + k + "' = '" + v + "'<br />";
+         }
+ 
+     key.value = "";
+     value.value = "";
+         content.innerHTML = str;
+       }
+ 
+       refreshContents();
+     });
