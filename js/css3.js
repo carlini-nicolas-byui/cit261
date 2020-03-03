@@ -11,3 +11,13 @@
         //changes the values of the properties
         document.documentElement.style.setProperty(`--${this.id}`, this.value + suffix);
       }
+
+      var borderBtn = document.getElementById('borderBtn');
+      borderBtn.addEventListener('click', function(e) {
+        document.getElementById("profile").classList.add("big_border");
+      });
+
+      var remBorderBtn = document.getElementById('remBorderBtn');
+      remBorderBtn.addEventListener('click', function(e) {
+        document.getElementById("profile").classList.remove("big_border");
+      });

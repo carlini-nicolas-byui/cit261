@@ -19,3 +19,7 @@
 input {
   width:100px;
 }
+
+.big_border {
+  border: black solid 10px;
+}
