@@ -34,19 +34,14 @@
               </div>
               <br>
               <h2>Using Arrays in localstorage </h2>
-              <a>Lets take a peak in what is in the localstorage. The following will show all the values and allow us to mainpulate it. We do this by using arrays:</a>
+              <a>We can save items in localstorage by using an array: </a>
               <div>
-                <a>Key Name: <input type="text" id="key_name" /><br /></a>
-                <a>Key Value <input type="text" id="key_value" /><br /></a>
-                
-                  <input type="button" id="add" value="Save to Storage" />
-                  <br/>
-                  <input type="button" id="remove" value="Remove from Storage" />
-                  <br/>
-                  <input type="button" id="clear" value="Clear Storage" />
-                <br/>
-                Contents of LocalStorage<br />
-                <span id="values"></span>
+                <form action="#" name="storageForm" method="post">
+                  <input type="text" name="item" id="item"/>
+                  <button id="btnAdd">Add To Local Storage</button>
+                </form>
+                <a>Click the item to remove it.</a>
+                <div class="output"></div>
                 <br/>
             </div>
             <br>
