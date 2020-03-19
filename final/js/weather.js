@@ -30,6 +30,8 @@
       document.getElementById('dayfive').innerHTML= tempforcast[5]; 
       document.getElementById('datefive').innerHTML= tempforcastday[5];
    }
+
+   document.getElementById("weather_container").style.display = "block";
  
 }
 

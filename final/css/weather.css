@@ -642,3 +642,7 @@ table {
 	font-weight: 400;
 	padding: 0.3em;
   }
+
+  .weather_container{
+	  display: none;
+  }
