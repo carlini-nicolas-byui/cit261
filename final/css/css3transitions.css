@@ -25,6 +25,9 @@
     transition: 1s; 
   }
   
+  a{
+    display: none;
+  }
   
   .sidenav a {
     padding: 5px 5px 5px 20px;
