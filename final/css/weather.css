@@ -44,20 +44,6 @@ font-size: 1em;
 	font-size: 1.5em;;
 }
 
-.clear{
-
-    background: blue;
-}
-
-.clouds{
-
-    background: orange;
-}
-
-.snow{
-
-    background: gray;
-}
 
 .weathersummary {
     position: absolute;
@@ -75,8 +61,8 @@ font-size: 1em;
 	width: 20px; 
 	margin-left: -15px;
 	position: absolute;
-
-	left: 90px;  
+	left: 52%;
+	/*left: 90px;  */
 	top: 20px;
 }
 .sunny:before {
@@ -110,7 +96,8 @@ font-size: 1em;
 .cloudy {
     
 
-	left: 90px;  
+	left: 45%;
+	/* left: 90px;  */
 	top: 80px;
   
 	animation: cloudy 5s ease-in-out infinite;
@@ -150,7 +137,7 @@ font-size: 1em;
 /* RAINY */
 .rainy {
     
-  left: 90px;  
+  left: 45%;  
 	top: 80px;
 	animation: rainy 5s ease-in-out infinite 1s;
 	background: #CCCCCC; 
@@ -292,7 +279,7 @@ font-size: 1em;
 /* RAINBOW */
 .rainbow {
     
-  left: 90px;  
+  left: 52%;  
 	top: 80px;
 	animation: rainbow 5s ease-in-out infinite;
 	border-radius: 170px 0 0 0;
@@ -399,7 +386,7 @@ font-size: 1em;
 /* STORMY */
 .stormy {
     
-  	left: 90px;  
+  	left: 52%;  
 	top: 80px;
 	animation: stormy 5s ease-in-out infinite;
 	background: #222222;
@@ -460,7 +447,7 @@ font-size: 1em;
 /* SNOWY */
 .snowy {
     
-  	left: 90px;  
+  	left: 52%;  
 	top: 80px;
 	animation: snowy 5s ease-in-out infinite 1s;
 	background: #FFFFFF; 
