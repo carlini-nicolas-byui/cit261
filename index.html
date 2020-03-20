@@ -6,36 +6,72 @@
         <title>CIT 261 - Fluency Evidence | Nicolas Carlini | BYU-Idaho</title>
         <meta name="description" content="Fluency evidence page for Nicolas Carlini in CIT 261 at Brigham Young University-Idaho. ">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/weather.css">
+
  </head>
  <body>
         <header>
-            <img src="images/nicolas.jpg" alt="Nicolas Carlini">
-            <h1>Nicolas Carlini</h1>
+
         </header>
         <main>
-            <h2>CIT 261 - Fluency Evidence</h2>
-            <ul>
-                <li><a href="javascript1.html">Fluency Evidence: JavaScript - done</a>
-                <li><a href="javascript2.html">Fluency Evidence: JavaScript Objects - done</a></li>
-                <li><a href="json.html">Fluency Evidence: JSON - done</a></li>
-                <li><a href="json.html">Fluency Evidence: AJAX - done </a></li>
-                <li><a href="css3transitions.html">Fluency Evidence: CSS3 Transitions, Animations, and Transformations - done</a></li>
-                <li><a href="css3transitions.html">Fluency Evidence: CSS3 Transitions - done</a></li>
-                <li><a href="css3.html">Fluency Evidence: CSS3 Transforms - done</a></li>
-                <li><a href="css3.html">Fluency Evidence: CSS Animations - done</a></li>
-                <li><a href="dom.html">Fluency Evidence: DOM Document Object Model - done</a></li>
+            <h1>Weather Now!</h1>
+            <span id="currentDate"></span>
+                <p id="zip_code">Zip code:</p>
+                  <input type="text" id="city" class="zip_code_text" name="fname">
+                <input type="button" value=">>" id="weatherbutton" onclick="get_weather()"/>
+            </div>
+            <div class="weather_container" id="weather_container">
+              <div class="daily" id="daily">
+                <div class="icon_container">
+                  <div id = "weather_icon"></div>
+                </div>
+          
+                  <section class="weathersummary">
+                      <p class="label"><span id="city_temp"></span></p>
 
-                <li><a href="css-javascript.html">Fluency Evidence: CSS3 using JavaScript - done</a></li>
-                <li><a href="localstorage.html">Fluency Evidence: JavaScript Events - done</a></li>
-                <li><a href="html5.html">Fluency Evidence: HTML5 Tags for media - done</a></li>
-                <li><a href="localstorage.html">Fluency Evidence: Local Storage - done</a></li>
-                
-            </ul>            
-    </main>
-        <footer>
-            <p>&copy; 2020 - Nicolas Carlini - Argentina - <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-        </footer>
-      </body>
+                      <p class="label"><span id="description"></span></p>
+    
+                      <p class="label"><span id="todaytemp"></span></p>
+
+                      <p class="label">Humidity: <span id="humidity"></span>%</p>
+
+                      <p class="label">Wind Direction: <span id="winddirection"></span></p>
+
+                      <p class="label">Wind Speed: <span id="windspeed"></span></p>
+
+                      <p class="label">Wind Chill: <span id="chill_text"></span></p>
+                  </section>
+                </div>
+      
+
+                <section class="forecast">
+                  <h3>Next 5 Days</h3>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th><span id="dateone"></span></th>
+                        <th><span id="datetwo"></span></th>
+                        <th><span id="datethree"></span></th>
+                        <th><span id="datefour"></span></th>
+                        <th><span id="datefive"></span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span id="dayone"></span>&deg;F</td>
+                        <td><span id="daytwo"></span>&deg;F</td>
+                        <td><span id="daythree"></span>&deg;F</td>
+                        <td><span id="dayfour"></span>&deg;F</td>
+                        <td><span id="dayfive"></span>&deg;F</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+            </div>
+</div>
+
+             
+</main>
+<script src="js/weather.js"></script>
+  </body>
 </html>
